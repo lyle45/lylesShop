@@ -1,3 +1,4 @@
 <product ng-repeat="product in $ctrl.products" product="product"
          is-cart-product="true" cart-action="$ctrl.removeFromCart(product)"></product>
+<md-button class="md-primary md-raised" ng-show="$ctrl.products.length > 0">CHECKOUT!</md-button>
 <div class="no-items-in-cart" ng-show="($ctrl.products.length === 0)">You have no items in your cart...</div>
