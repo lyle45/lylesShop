@@ -36,6 +36,7 @@ myApp.run(function ($rootScope, $state, userService) {
                 userService.getUserLoginStatus()
                     .then((result) => {
                         if (result.data.status) {
+                            //ui router currently facing a bug of infinite loops on state change so in order to have this correctly a workaround was needed to be written (the notify: false and broadcast success)
                             $state.go(next, {}, {notify: false}).then(() => {
                                 $rootScope.$broadcast('$stateChangeSuccess', next, {}, current, {})
                             });
