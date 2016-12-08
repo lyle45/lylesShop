@@ -3,7 +3,11 @@ class UserService {
     constructor($http, $q) {
         this._$http = $http;
         this._$q = $q;
-        this._user = JSON.parse(sessionStorage.getItem('user')) || null;
+        $http.get('/user/getUser').then((data) => {
+            if (data.data.user) {
+                this.setUser(data.data.user);
+            }
+        })
     }
 
     login(username, password) {
@@ -11,16 +15,15 @@ class UserService {
         this._$http.post('/user/login',
             {username: username, password: password})
         // handle success
-            .success((data, status) => {
-                if (status === 200) {
-                    this.setUser(data.user);
+            .then((data) => {
+                if (data.status === 200) {
+                    this.setUser(data.data.user);
                     deferred.resolve();
                 } else {
                     this.clearUser();
                     deferred.reject();
                 }
-            })
-            .error(() => {
+            }, () => {
                 this.clearUser();
                 deferred.reject();
             });
@@ -32,16 +35,15 @@ class UserService {
         this._$http.post('/user/register',
             {username: username, password: password})
         // handle success
-            .success((data, status) => {
-                if (status === 200 && data.status) {
-                    this.setUser(data.user);
+            .then((data) => {
+                if (data.status === 200) {
+                    this.setUser(data.data.user);
                     deferred.resolve();
                 } else {
                     this.clearUser();
                     deferred.reject();
                 }
-            })
-            .error(() => {
+            }, () => {
                 this.clearUser();
                 deferred.reject();
             });
@@ -51,15 +53,14 @@ class UserService {
     logout() {
         let deferred = this._$q.defer();
         this._$http.get('/user/logout')
-            .success((data, status) => {
-                if (status === 200) {
+            .then((data) => {
+                if (data.status === 200) {
                     this.clearUser();
                     deferred.resolve();
                 } else {
                     deferred.reject();
                 }
-            })
-            .error((err) => {
+            }, (err) => {
                 deferred.reject(err);
             });
         return deferred.promise;
@@ -72,7 +73,7 @@ class UserService {
     }
 
     clearUser() {
-        sessionStorage.setItem('user', undefined);
+        sessionStorage.removeItem('user');
         this._user = undefined;
     }
 
@@ -97,6 +98,7 @@ class UserService {
             this._user.cart.push(product);
         }
     }
+
     removeFromCart(product) {
         let index = _.findIndex(this._user.cart, {_id: product._id});
         if (index >= 0) {
