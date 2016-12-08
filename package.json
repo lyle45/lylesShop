@@ -1,5 +1,5 @@
 {
-  "name": "mean-auth",
+  "name": "lylesShop",
   "scripts": {
     "start": "node server/server.js"
   },
