@@ -1,0 +1,18 @@
+<md-content class="md-padding">
+    <md-card flex>
+        <md-card-title>
+            <md-card-title-text>
+                <span class="md-headline">{{$ctrl.product.name}}</span>
+                <span class="md-subhead">{{$ctrl.product.description}}</span>
+            </md-card-title-text>
+            <md-card-title-media>
+                <img ng-src="{{$ctrl.product.thumbnail}}" class="md-media-lg md-card-image">
+            </md-card-title-media>
+        </md-card-title>
+        <md-card-actions layout="row" layout-align="end center">
+            <strong>Price: {{$ctrl.product.price | currency}} | Quantity: {{$ctrl.product.counter || 0}}</strong>
+            <span flex></span>
+            <md-button ng-click="$ctrl.cartAction($ctrl.product)">{{$ctrl.isCartProduct ? 'Remove from cart' : 'Add to cart'}}</md-button>
+        </md-card-actions>
+    </md-card>
+</md-content>

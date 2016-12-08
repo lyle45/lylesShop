@@ -1,0 +1,17 @@
+<md-content>
+    <md-toolbar>
+        <div class="md-toolbar-tools">
+            <h2>
+                <span>Hi {{$ctrl.username}}! Welcome To My Shop!</span>
+            </h2>
+            <span flex></span>
+            <md-button ng-switch="$ctrl.$state.$current.name" class="md-raised switch-button">
+                <a ng-switch-when="main.catalog" ui-sref="main.cart">MY CART</a>
+                <a ng-switch-when="main.cart" ui-sref="main.catalog">CATALOG</a>
+            </md-button>
+            <md-button class="md-raised" aria-label="logout" ng-click="$ctrl.logout()">
+                LOG OUT
+            </md-button>
+        </div>
+    </md-toolbar>
+</md-content>
