@@ -2,17 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="01cfa523-a79c-4e47-9191-71d0d4bc4773" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/angular/angular.min.js.gzip" afterPath="$PROJECT_DIR$/client/bower_components/angular/angular.min.js.gzip" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower.json" afterPath="$PROJECT_DIR$/bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/angular/.bower.json" afterPath="$PROJECT_DIR$/client/bower_components/angular/.bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/angular/angular.js" afterPath="$PROJECT_DIR$/client/bower_components/angular/angular.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/angular/angular.min.js" afterPath="$PROJECT_DIR$/client/bower_components/angular/angular.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/angular/angular.min.js.map" afterPath="$PROJECT_DIR$/client/bower_components/angular/angular.min.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/angular/bower.json" afterPath="$PROJECT_DIR$/client/bower_components/angular/bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/bower_components/angular/package.json" afterPath="$PROJECT_DIR$/client/bower_components/angular/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/services/user-service.js" afterPath="$PROJECT_DIR$/client/services/user-service.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/routes/userApi.js" afterPath="$PROJECT_DIR$/server/routes/userApi.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -364,12 +354,12 @@
       <option name="presentableId" value="Default" />
       <updated>1481219174891</updated>
       <workItem from="1481219176190" duration="1908000" />
-      <workItem from="1481221108924" duration="7162000" />
+      <workItem from="1481221108924" duration="7412000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9070000" />
+    <option name="totallyTimeSpent" value="9320000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="1942" height="1042" extended-state="6" />
