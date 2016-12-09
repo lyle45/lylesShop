@@ -69,11 +69,9 @@ class UserService {
     setUser(user) {
         this._user = user;
         this._user.cart = [];
-        sessionStorage.setItem('user', JSON.stringify(this._user));
     }
 
     clearUser() {
-        sessionStorage.removeItem('user');
         this._user = undefined;
     }
 
